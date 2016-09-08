@@ -1,0 +1,91 @@
+.weather
+   position: relative
+   display: block
+   list-style: none
+   height: 60px
+   padding: 5px 10px
+   background-size: cover
+   background-position: center
+   animation: 1s fadeinLeft forwards
+   p
+      margin: 0
+      color: white
+   h1
+      margin: 0
+      padding: 0
+      color: white
+      width: 70%
+      float: left
+      font-size: 22px
+      font-weight: 400
+
+   .temp
+      display: block
+      width: 23%
+      float: left
+      font-size: 42px
+      font-weight: 300
+      line-height: 1
+      color: white
+      margin-top: -8px
+      text-align: right
+   .time
+      font-size: 14px
+   .location-symbol
+      position: absolute
+      top: 5px
+      left: 50px
+      display: inline-block
+      font-size: 10px
+      color: white
+      transform: rotate(-45deg)
+      animation: 2.4s blink infinite
+   #remove
+      position: absolute
+      top: 0
+      right: 0
+      background: transparent
+      height: 25px
+      width: 25px
+      border: 0
+      outline: none
+      color: white
+      font-weight: 400
+      font-size: 14px
+      cursor: pointer
+   .info
+      display: none
+.active
+   height: 110px
+   transition: height 0.1s ease-in
+   .info
+      display: block
+.sunny
+   background-image: url(../img/sunny.jpg)
+.cloudy
+   background-image: url(../img/cloudy.jpg)
+.light-cloudy
+   background-image: url(../img/light-clouds.jpg)
+.rainy
+   background-image: url(../img/rainy.jpg)
+.thunder
+   background-image: url(../img/thunder.jpg)
+.unknown
+   background: #ddd
+.failure
+   background: #eee
+
+@keyframes blink
+   0%
+      opacity: .1
+   50%
+      opacity: 1
+   100%
+      opacity: .1
+@keyframes fadeinLeft
+   0%
+      transform: translateX(-100%)
+      opacity: 0
+   100%
+      opacity: 1
+      transform: translateX(0%)
