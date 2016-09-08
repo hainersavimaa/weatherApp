@@ -22,4 +22,4 @@ Later on, the user is able to add new cities to the list. Clicking on the button
   <li>clears the input</li>
   </ul>
 
-Unfortunately this application doesn't save the state after refresh. Although the added city gets converted for a suitable format for JSON POST function. There was some kind of cross-domain problems with the Ajax POST function.
+Unfortunately this application doesn't save the state after refresh. Although the added city gets converted for a suitable format for JSON POST function. There was some kind of cross-domain problems with the Ajax POST function. Since github pages are loaded over https and openweathermap API's do not support https connections the app should be cloned and hosted on your localhost or any other server with http.
