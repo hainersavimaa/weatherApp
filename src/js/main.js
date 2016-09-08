@@ -26,7 +26,7 @@ $(function(){
       //if latitude and longitude exists
       if(latitude != '' && longitude !='') {
          console.log("retrieving information..");
-         $.getJSON( "http://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&units=metric&appid="+appid, function(data) {
+         $.getJSON( "https://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&units=metric&appid="+appid, function(data) {
             //load wanted json objects into a new array "locationWeather".
             var locationWeather= new Array();
             locationWeather['id'] = data.id;
@@ -48,7 +48,7 @@ $(function(){
    $("#add-city").click(function(event){
    var city = $("#city").val();  //
    if(city!='') { //if there is an input
-      $.getJSON( "http://api.openweathermap.org/data/2.5/weather?q="+encodeURIComponent(city)+"&units=metric&appid="+appid, function(data) {
+      $.getJSON( "https://api.openweathermap.org/data/2.5/weather?q="+encodeURIComponent(city)+"&units=metric&appid="+appid, function(data) {
          //load info from JSON into an array
          var currentWeather = new Array();
          currentWeather['id'] = data.id;
